@@ -13,20 +13,15 @@ def generate_product_content(name, category, features):
     return description, bullets, seo_title
 
 
-# Example products
-products = [
-    ("Wave Luxe", "Slides", "soft EVA sole and anti-slip grip"),
-    ("Surf Line", "Sandals", "water-resistant upper and cushioned footbed"),
-    ("Breezy Toe", "Flip Flops", "lightweight sole and flexible straps")
-]
+# User input
+name = input("Enter product name: ")
+category = input("Enter category: ")
+features = input("Enter features: ")
 
-for name, category, features in products:
-    desc, bullets, seo = generate_product_content(name, category, features)
+desc, bullets, seo = generate_product_content(name, category, features)
 
-    print("\n--- PRODUCT ---")
-    print("Name:", name)
-    print("Description:", desc)
-    print("SEO Title:", seo)
-    print("Bullets:")
-    for b in bullets:
-        print("-", b)
+print("\nDescription:\n", desc)
+print("\nBullet Points:")
+for b in bullets:
+    print("-", b)
+print("\nSEO Title:\n", seo)
